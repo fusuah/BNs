@@ -1,0 +1,47 @@
+{
+  "name": "bns-assist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@supabase/supabase-js": "^2.56.1",
+    "axios": "^1.9.0",
+    "bcrypt": "^6.0.0",
+    "chart.js": "^4.5.0",
+    "clsx": "^2.1.1",
+    "daisyui": "^5.0.35",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "exceljs": "^4.4.0",
+    "firebase": "^11.8.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.507.0",
+    "mongoose": "^8.14.1",
+    "next": "^16.1.1",
+    "react": "^19.2.3",
+    "react-apexcharts": "^1.7.0",
+    "react-calendar": "^6.0.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-day-picker": "^9.6.7",
+    "react-dom": "^19.2.3",
+    "react-hot-toast": "^2.6.0",
+    "react-markdown": "^10.1.0",
+    "react-redux": "^9.2.0",
+    "recharts": "^2.15.4",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4"
+  }
+}

@@ -1,0 +1,186 @@
+return (
+    <div className="w-full text-black bg-white">
+      {/* HEADER */}
+      <header className="w-full bg-white p-4 flex justify-between items-center border-b border-gray-200">
+        {/* LOGO CONTAINER */}
+        <div className="flex gap-2 justify-center items-center ">
+          <span className="w-10 h-10 bg-gradient-to-br from-[#4CAF50] to-[#2196F3] rounded-md flex items-center justify-center text-white font-bold ">
+            B
+          </span>
+          <h1 className="text-[20px] font-bold ">BNS Assist</h1>
+        </div>
+
+        {/* NAV LIST */}
+
+        <nav className="flex gap-[32px] items-center justify-center ">
+          <a className="text-[16px] text-gray-600"> Features</a>
+          <a className="text-[16px] text-gray-600"> About</a>
+          <a className="text-[16px] text-gray-600"> Testimonials</a>
+
+          {/* CTA NAV CONT */}
+
+          <div className="flex gap-[8px]">
+            {" "}
+            <button className="py-2 px-4 text-black border border-gray-200 rounded-md">
+              Log In
+            </button>
+            <button className="py-2 px-4 text-white bg-[#4CAF50] rounded-md">
+              Get Started
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* HERO-SECTION */}
+
+      <div
+        id="hero-section"
+        className="flex mx-auto bg-[##FBFEFC] w-full max-w-[1120px] py-[64px] "
+      >
+        {/* HERO _TEXT */}
+        <div className="w-1/2  flex flex-col items-start justify-center  ">
+          <h1 className="w-full mb-4 text-[48px] leading-[100%] font-inter bg-gradient-to-br from-[#4CAF50] to-[#2196F3] bg-clip-text text-transparent font-bold">
+            Empowering Community Nutrition Through Digital Tools
+          </h1>
+          <p className="text-[20px] text-gray-600 mb-[24px]">
+            {" "}
+            BNS Assist simplifies data collection, reporting, and communication
+            for Barangay Nutrition Scholars, improving community health
+            outcomes.
+          </p>
+          <div className="flex gap-[8px]">
+            {" "}
+            <button className="py-2 px-[32px] text-white bg-[#4CAF50] rounded-md">
+              Get Started
+            </button>
+            <button className="py-2 px-[32px] text-black border border-gray-200 rounded-md">
+              Log In
+            </button>
+          </div>
+        </div>
+
+        <div className="w-1/2">
+          <img
+            src="https://nutribuddy-assist-portal.lovable.app/lovable-uploads/5f50d80c-4b0c-4763-a69f-c1227e0c6ccd.png"
+            alt="Barangay Nutrition Scholar visiting a home"
+            className="rounded-2xl shadow-xl relative z-10 object-cover h-[500px] w-full"
+          />{" "}
+        </div>
+      </div>
+    </div>
+  );
+
+
+
+
+TASK BNS WORKER
+
+   <div className="w-full flex gap-6">
+            {/* PENDING */}
+            <div className="w-[33.33%] min-h-[518px] bg-white border border-gray-200 overflow-hidden rounded-md">
+              {/* BOX TITLE */}
+              <div className="w-full p-6 bg-[#F5F5F5]">
+                <h3 className="text-[18px] font-semibold">Pending</h3>{" "}
+                <p className="text-[16px] text-[#64748b] mb-2 ">
+                  Tasks that need to be done
+                </p>
+              </div>
+
+              {/* CARD DATA */}
+              {pendingTask}
+            </div>
+
+            {/* ONGOING */}
+            <div className="w-[33.33%] min-h-[518px] bg-white border border-gray-200 overflow-hidden rounded-md">
+              {/* BOX TITLE */}
+              <div className="w-full p-6 bg-[#90CAF9]">
+                <h3 className="text-[18px] font-semibold">Ongoing</h3>{" "}
+                <p className="text-[16px] text-[#64748b] mb-2 ">
+                  Tasks currently in progress
+                </p>
+              </div>
+
+              {/* CARD DATA */}
+              {onGoingTask}
+            </div>
+
+            {/* COMPLETE */}
+            <div className="w-[33.33%] min-h-[518px] bg-white border border-gray-200 overflow-hidden rounded-md">
+              {/* BOX TITLE */}
+              <div className="w-full p-6 bg-[#4CAF50]">
+                <h3 className="text-[18px] font-semibold">Completed</h3>{" "}
+                <p className="text-[16px] text-[#64748b] mb-2 ">
+                  Recently completed tasks
+                </p>
+              </div>
+
+              {/* CARD DATA */}
+              {completedTask}
+            </div>
+          </div>
+
+
+
+            /* DATA SAMPLE RENDERING */
+
+  const pendingTask = myTasks?.map((data) => {
+    if (data?.status?.toLowerCase() === "pending") {
+      return (
+        <div className="w-full p-4 border border-gray-200" key={data?.id}>
+          {/* <div className="w-full flex justify-between mb-2">
+            <h3 className="text-[20px] font-semibold">{data?.task}</h3>
+
+            <span>
+              <i className="bi bi-check text-[#4CAF50] mr-2 text-[24px]"></i>
+              <i className="bi bi-x text-[#EF5350] text-[24px] "></i>
+            </span>
+          </div>
+
+          <p className="text-[16px] text-[#64748b] mb-2">{data?.taskContent}</p>
+          <p className="text-[12px] text-[#64748b] ">
+            {data?.date} • {data?.time}
+          </p> */}
+        </div>
+      );
+    }
+  });
+
+  const onGoingTask = myTasks?.map((data) => {
+    if (data?.status?.toLowerCase() === "ongoing") {
+      return (
+        <div className="w-full p-4 border border-gray-200" key={data?.id}>
+          {/*   <div className="w-full flex justify-between mb-2">
+            <h3 className="text-[20px] font-semibold">{data?.task}</h3>
+
+            <span>
+              <i className="bi bi-check text-[#4CAF50] mr-2 text-[24px]"></i>
+            </span>
+          </div>
+
+          <p className="text-[16px] text-[#64748b] mb-2">{data?.taskContent}</p>
+          <p className="text-[12px] text-[#64748b] ">
+            {data?.date} • {data?.time}
+          </p> */}
+        </div>
+      );
+    }
+  });
+
+  const completedTask = myTasks?.map((data) => {
+    if (data?.status?.toLowerCase() === "completed") {
+      return (
+        <div className="w-full p-4 border border-gray-200" key={data?.id}>
+          {/*  <div className="w-full flex justify-between mb-2">
+            <h3 className="text-[20px] font-semibold">{data?.task}</h3>
+
+            <span></span>
+          </div>
+
+          <p className="text-[16px] text-[#64748b] mb-2">{data?.taskContent}</p>
+          <p className="text-[12px] text-[#64748b] ">
+            {data?.date} • {data?.time}
+          </p> */}
+        </div>
+      );
+    }
+  });

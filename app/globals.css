@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background: white;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* DAVE WAG MOTO GALAWIN HA */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* calendar-custom.css */
+
+/* ✅ Green background for selected date */
+.react-calendar__tile--active {
+  background-color: #22c55e !important; /* Tailwind's green-500 */
+  color: white !important;
+  border-radius: 0.5rem;
+}
+
+/* Optional: green hover for active tile */
+.react-calendar__tile--active:hover {
+  background-color: #16a34a !important; /* Tailwind's green-600 */
+} /* calendar-custom.css */
+
+/* ✅ Add light gray border to calendar */
+.react-calendar {
+  border: 1px solid #e5e7eb !important; /* Tailwind's border-gray-200 */
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 1rem;
+}
+
+.primary-btn {
+  @apply bg-[#4CAF50]  py-[8px] px-[12px] rounded-md;
+}
+
+.text-primary-color {
+  @apply text-[#4CAF50];
+}
+.text-secondary-color {
+  @apply text-[#FFC107];
+}
